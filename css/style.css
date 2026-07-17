@@ -1386,13 +1386,37 @@ body.nav-open {
   }
 
   .brand {
-    font-size: 1rem;
+    font-size: 0.88rem;
     min-width: 0;
+    flex: 1 1 0;
+    align-items: flex-start;
+    gap: 8px;
   }
   .brand > span:not(.brand-mark) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
+    overflow: visible;
+    line-height: 1.2;
+  }
+  .brand small {
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+  }
+
+  .nav {
+    height: auto;
+    min-height: var(--nav-h);
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-inner {
+    min-height: var(--nav-h);
+    padding-block: 10px;
+    align-items: center;
+  }
+  .mobile-nav {
+    position: relative;
+    top: auto;
+    max-height: calc(100svh - var(--nav-h) - env(safe-area-inset-top, 0px));
   }
 
   .why-grid,
@@ -1408,7 +1432,7 @@ body.nav-open {
 
   .hero-content {
     padding-bottom: 48px;
-    padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + 28px);
+    padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + 36px);
   }
   .hero-title {
     max-width: none;
@@ -1634,9 +1658,6 @@ body.nav-open {
 
 /* ---------- Responsive: very narrow (320px) ---------- */
 @media (max-width: 360px) {
-  .brand > span:not(.brand-mark) {
-    max-width: 9.5rem;
-  }
   .lang-toggle button {
     padding: 6px 8px;
   }
