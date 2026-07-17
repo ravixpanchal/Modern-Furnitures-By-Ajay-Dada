@@ -27,6 +27,8 @@
     lightboxIndex: 0,
   };
 
+  let revealObserver = null;
+
   /* ---------------------------------------------------------------------
      MANIFEST LOADING (with graceful fallback)
      ------------------------------------------------------------------- */
@@ -87,6 +89,9 @@
     renderVideos();
     renderFaq();
     renderContact();
+
+    // Schedule scroll reveal observation after layout pass (100ms delay for browser rendering)
+    setTimeout(initRevealOnScroll, 100);
   }
 
   function t(key) {
@@ -604,18 +609,20 @@
   }
 
   function initRevealOnScroll() {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in");
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    if (!revealObserver) {
+      revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+    }
+    document.querySelectorAll(".reveal:not(.in)").forEach((el) => revealObserver.observe(el));
   }
 
   /* ---------------------------------------------------------------------
@@ -664,9 +671,6 @@
     document.getElementById("themeToggle").addEventListener("click", () => {
       applyTheme(state.theme === "dark" ? "light" : "dark");
     });
-
-    // Re-run reveal observer after dynamic content is injected
-    setTimeout(initRevealOnScroll, 50);
   }
 
   document.addEventListener("DOMContentLoaded", init);
