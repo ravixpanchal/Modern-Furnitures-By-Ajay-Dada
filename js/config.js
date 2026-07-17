@@ -33,16 +33,16 @@ const SITE_CONFIG = {
   // Stats (shown as animated counters)
   stats: [
     { end: 100, suffix: "+", label: { en: "Projects Completed", hi: "पूर्ण किए गए प्रोजेक्ट" } },
-    { end: 80,  suffix: "+", label: { en: "Furniture Designs",  hi: "फर्नीचर डिज़ाइन" } },
-    { end: 100, suffix: "+", label: { en: "Happy Clients",      hi: "संतुष्ट ग्राहक" } },
-    { end: 20,  suffix: "+", label: { en: "Years Experience",   hi: "वर्षों का अनुभव" } },
+    { end: 80, suffix: "+", label: { en: "Furniture Designs", hi: "फर्नीचर डिज़ाइन" } },
+    { end: 100, suffix: "+", label: { en: "Happy Clients", hi: "संतुष्ट ग्राहक" } },
+    { end: 20, suffix: "+", label: { en: "Years Experience", hi: "वर्षों का अनुभव" } },
   ],
 
   // Testimonials — add/replace freely. photo is optional (path or leave "")
   testimonials: [
     {
-      name: "Rakesh Mehta",
-      city: "Vadodara",
+      name: "Rajeev Master",
+      city: "Jalaun Chungi, Orai",
       photo: "",
       rating: 5,
       text: {
@@ -51,8 +51,8 @@ const SITE_CONFIG = {
       },
     },
     {
-      name: "Priya Shah",
-      city: "Anand",
+      name: "Pradeep Patel",
+      city: "Mechanic Nagar, Orai",
       photo: "",
       rating: 5,
       text: {
@@ -61,8 +61,8 @@ const SITE_CONFIG = {
       },
     },
     {
-      name: "Sanjay Patel",
-      city: "Baroda",
+      name: "Dr. Alok Purwar",
+      city: "Station Road, Orai",
       photo: "",
       rating: 5,
       text: {
@@ -97,17 +97,17 @@ const SITE_CONFIG = {
         hi: "उच्च घनत्व बोर्ड जिसमें स्क्रू पकड़ने की क्षमता बेहतर होती है, मॉड्यूलर यूनिट्स के लिए बढ़िया।",
       },
     },
-  {
-  name: "WPC (Ply Board)",
-  level: {
-    en: "Waterproof – High Durability",
-    hi: "वाटरप्रूफ – उच्च टिकाऊपन"
-  },
-  desc: {
-    en: "Advanced composite board with excellent moisture resistance, termite protection, and durability for premium furniture and modular interiors.",
-    hi: "उन्नत कंपोजिट बोर्ड जो बेहतरीन नमी प्रतिरोध, दीमक सुरक्षा और टिकाऊपन प्रदान करता है, प्रीमियम फर्नीचर और मॉड्यूलर इंटीरियर्स के लिए उपयुक्त।"
-  }
-},
+    {
+      name: "WPC (Ply Board)",
+      level: {
+        en: "Waterproof – High Durability",
+        hi: "वाटरप्रूफ – उच्च टिकाऊपन"
+      },
+      desc: {
+        en: "Advanced composite board with excellent moisture resistance, termite protection, and durability for premium furniture and modular interiors.",
+        hi: "उन्नत कंपोजिट बोर्ड जो बेहतरीन नमी प्रतिरोध, दीमक सुरक्षा और टिकाऊपन प्रदान करता है, प्रीमियम फर्नीचर और मॉड्यूलर इंटीरियर्स के लिए उपयुक्त।"
+      }
+    },
     {
       name: "Laminates",
       level: { en: "Scratch & Heat Resistant", hi: "खरोंच व गर्मी प्रतिरोधी" },
@@ -139,8 +139,8 @@ const SITE_CONFIG = {
     {
       q: { en: "How much does a kitchen cost?", hi: "किचन की कीमत कितनी होती है?" },
       a: {
-        en: "Cost depends on kitchen size, material chosen (Plywood/HDHMR/MDF) and finish (Laminate/Acrylic/Veneer). Share your kitchen dimensions on WhatsApp and we'll send a free estimate.",
-        hi: "कीमत किचन के साइज़, चुने गए मटीरियल (प्लाईवुड/एचडीएचएमआर/एमडीएफ) और फिनिश (लैमिनेट/एक्रिलिक/विनियर) पर निर्भर करती है। अपने किचन का माप WhatsApp पर भेजें, हम मुफ्त अनुमान भेजेंगे।",
+        en: "Cost depends on kitchen size, material chosen (Plywood/HDHMR/WPC) and finish (Laminate/Acrylic/Veneer). Share your kitchen dimensions on WhatsApp and we'll send a free estimate.",
+        hi: "कीमत किचन के साइज़, चुने गए मटीरियल (प्लाईवुड/एचडीएचएमआर/डब्ल्यूपीसी) और फिनिश (लैमिनेट/एक्रिलिक/विनियर) पर निर्भर करती है। अपने किचन का माप WhatsApp पर भेजें, हम मुफ्त अनुमान भेजेंगे।",
       },
     },
     {
@@ -153,8 +153,8 @@ const SITE_CONFIG = {
     {
       q: { en: "Which material is best?", hi: "कौन सा मटीरियल सबसे अच्छा है?" },
       a: {
-        en: "Plywood is best for durability and moisture resistance (kitchens/bathrooms). MDF/HDHMR work well for bedrooms and wardrobes at a lower cost. We'll suggest the right option after seeing your space.",
-        hi: "टिकाऊपन और नमी प्रतिरोध के लिए प्लाईवुड सबसे अच्छा है (किचन/बाथरूम)। बेडरूम और वार्डरोब के लिए कम कीमत में एमडीएफ/एचडीएचएमआर बढ़िया रहता है। आपकी जगह देखने के बाद हम सही विकल्प सुझाएंगे।",
+        en: "Plywood is best for durability and moisture resistance (kitchens/bathrooms). WPC/HDHMR work well for bedrooms and wardrobes at a lower cost. We'll suggest the right option after seeing your space.",
+        hi: "टिकाऊपन और नमी प्रतिरोध के लिए प्लाईवुड सबसे अच्छा है (किचन/बाथरूम)। बेडरूम और वार्डरोब के लिए कम कीमत में WPC/HDHMR बढ़िया रहता है। आपकी जगह देखने के बाद हम सही विकल्प सुझाएंगे।",
       },
     },
     {
