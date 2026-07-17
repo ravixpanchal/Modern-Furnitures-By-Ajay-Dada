@@ -600,12 +600,23 @@
 
     const burger = document.getElementById("navBurger");
     const mobileNav = document.getElementById("mobileNav");
+
+    function setMobileNavOpen(open) {
+      mobileNav.classList.toggle("open", open);
+      document.body.classList.toggle("nav-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+
     burger.addEventListener("click", () => {
-      mobileNav.classList.toggle("open");
+      setMobileNavOpen(!mobileNav.classList.contains("open"));
     });
     mobileNav.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => mobileNav.classList.remove("open"))
+      a.addEventListener("click", () => setMobileNavOpen(false))
     );
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 990) setMobileNavOpen(false);
+    });
   }
 
   function initRevealOnScroll() {

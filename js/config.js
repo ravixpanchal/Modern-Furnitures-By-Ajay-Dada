@@ -22,8 +22,8 @@ const SITE_CONFIG = {
   mapsEmbedSrc: "https://www.google.com/maps?q=25.98697308724328,79.44106470992814&output=embed",
   mapsShareLink: "https://maps.google.com/?q=25.98697308724328,79.44106470992814",
   addressLines: {
-    en: ["Ajay Dada Furniture Workshop", "Your Street, Area", "City, State – PIN"],
-    hi: ["अजय दादा फर्नीचर वर्कशॉप", "आपकी गली, क्षेत्र", "शहर, राज्य – पिन कोड"],
+    en: ["Ajay Dada Furniture Workshop"],
+    hi: ["अजय दादा फर्नीचर वर्कशॉप"],
   },
 
   // Social
