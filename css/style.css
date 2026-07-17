@@ -560,11 +560,11 @@ section.tight {
   display: flex;
   gap: 18px;
   width: max-content;
-  animation: marquee 60s linear infinite;
+  animation: marquee 90s linear infinite;
 }
 .marquee-track.reverse {
   animation-direction: reverse;
-  animation-duration: 75s;
+  animation-duration: 90s;
 }
 .marquee-viewport:hover .marquee-track {
   animation-play-state: paused;
