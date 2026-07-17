@@ -1325,12 +1325,17 @@ html[data-theme="dark"] .map-card iframe {
 }
 
 @media (max-width: 990px) {
-  .nav-links,
-  #langToggle {
+  .nav-links {
     display: none;
   }
   .nav-burger {
     display: inline-flex;
+  }
+  .lang-toggle {
+    font-size: 0.72rem;
+  }
+  .lang-toggle button {
+    padding: 7px 10px;
   }
 }
 
@@ -1376,11 +1381,6 @@ html[data-theme="dark"] .map-card iframe {
   border-bottom: 1px solid var(--border);
   font-weight: 500;
   font-size: 0.95rem;
-}
-.mobile-nav .lang-toggle {
-  display: flex;
-  margin-top: 12px;
-  align-self: flex-start;
 }
 
 /* Mobile responsive fixes */
